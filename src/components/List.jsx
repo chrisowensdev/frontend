@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import styled from 'styled-components';
 import Item from './Item';
+import AddItem from './AddItem';
 
 const Header = styled.div`
     display: flex;
@@ -20,6 +21,7 @@ const List = ({ list, setList }) => {
     return (
         <>
             <h1>Shopping List</h1>
+            <AddItem />
             <Header>
                 <span>Item</span>
                 <span>Done</span>
