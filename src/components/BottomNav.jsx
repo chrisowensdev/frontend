@@ -1,13 +1,38 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import styled from 'styled-components';
 
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+// import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import RestaurantIcon from '@material-ui/icons/Restaurant';
 import KitchenIcon from '@material-ui/icons/Kitchen';
 
 const useStyles = makeStyles((theme) => ({
+    bottomNavStyles: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        backgroundColor: '#6fc8a8',
+        borderRadius: '10px',
+        height: '80px',
+        margin: 'auto',
+        position: 'absolute',
+        bottom: '10px',
+        left: 0,
+        right: 0,
+        width: '300px',
+        color: '#fff'
+    },
+
+    navButton: {
+        color: "#fff",
+        height: '60px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        backgroundColor: 'transparent',
+        border: 'none'
+    },
+
     icon: {
         fontSize: '40px',
 
@@ -20,51 +45,25 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-const BottomNavDiv = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #6fc8a8;
-    border-radius: 10px;
-    height: 80px;
-    margin: auto;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    width: 300px;
-    color: #fff;
-`;
-
-const NavButton = styled.div`
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center
-`;
 
 const BottomNav = () => {
     const classes = useStyles();
     return (
-        <BottomNavDiv>
-            <NavButton>
-                <AddCircleOutlineIcon className={classes.icon}/>
-                <p className={classes.iconText}>Add</p>
-            </NavButton>
-            <NavButton>
+        <div className={classes.bottomNavStyles}>
+            <button type='button' className={classes.navButton}>
                 <ListAltIcon className={classes.icon}/>
                 <p className={classes.iconText}>List</p>
-            </NavButton>
-            <NavButton>
+            </button>
+            <button type='button' className={classes.navButton}>
                 <RestaurantIcon className={classes.icon}/>
                 <p className={classes.iconText}>Recipe</p>
-            </NavButton>
-            <NavButton>
+            </button>
+            <button type='button' className={classes.navButton}>
                 <KitchenIcon className={classes.icon}/>
                 <p className={classes.iconText}>Pantry</p>
-            </NavButton>
+            </button>
             
-        </BottomNavDiv>
+        </div>
     )
 }
 

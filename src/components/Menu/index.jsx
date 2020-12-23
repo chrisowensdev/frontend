@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
         backgroundColor: '#6fc8a8',
         borderRadius: '10px',
+        border: 'none'
     },
     menuIcon: {
         fontSize: '40px',
@@ -19,13 +20,18 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
+const _handleClick = (e) => {
+    e.preventDefault();
+
+}
+
 const Menu = () => {
     const classes = useStyles();
     return (
         <div className={classes.navDiv}>
-            <div className={classes.menuButton}>
+            <button className={classes.menuButton} onClick={e => _handleClick(e)}>
             <MenuIcon className={classes.menuIcon}/>
-            </div>
+            </button>
         </div>
     )
 }
