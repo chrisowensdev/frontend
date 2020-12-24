@@ -1,0 +1,65 @@
+.bottomNavStyles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6fc8a8;
+    border-radius: 10px;
+    height: 80px;
+    margin: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 300px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.bottomNavStyles.page{
+    height: 50px
+}
+
+.navButton {
+    color: #fff;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    width: 60px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+p.page {
+    display: none;
+}
+
+.navButton:focus {
+    outline: none;
+}
+
+.navButton.page {
+    height: 42px;
+    width: 40px;
+}
+
+.navButton.active {
+    background-color: #fff;
+    color: #6fc8a8;
+    height: 42px;
+    width: 40px;
+}
+
+
+.icon {
+    font-size: 40px;
+
+}
+
+.iconText {
+    text-transform: uppercase;
+    margin: 2px 0;
+    padding: 0;
+}

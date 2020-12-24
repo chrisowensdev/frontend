@@ -2,8 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 
-import Menu from './Menu';
-import BottomNav from './BottomNav';
+
 
 const useStyles = makeStyles((theme) => ({
     homeDiv: {
@@ -35,7 +34,7 @@ const Home = () => {
     const classes = useStyles();
     return (
         <>
-        <Menu />
+        
         <div className={classes.homeDiv}>
             <h1 className={classes.title}>Organize <br/>My Pantry</h1>
 
@@ -44,7 +43,7 @@ const Home = () => {
             alt='groceries'
             />
         </div>
-        <BottomNav />
+        
         </>
     )
 }

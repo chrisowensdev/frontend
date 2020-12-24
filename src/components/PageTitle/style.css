@@ -1,0 +1,17 @@
+.container {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    color: #6fc8a8;
+}
+
+h1 {
+    font-size: 1.3rem;
+    margin: 5px auto;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+}
