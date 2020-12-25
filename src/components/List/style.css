@@ -1,0 +1,25 @@
+.list-container {
+    background-color:  #6fc8a8;
+    height: 70vh;
+    width: 300px;
+    margin: 5px auto;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    margin: 0px 10px;
+    padding: 10px;
+
+}
+
+.list-item p{
+    color: #fff;
+    margin: 0;
+    font-size: 1.2rem;
+    
+}

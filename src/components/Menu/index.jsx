@@ -1,37 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import './style.css';
+
 const useStyles = makeStyles((theme) => ({
-    navDiv: {
-        position: 'absolute',
-        top: '5px',
-        right: '5px'
-    },
-    menuButton: {
-        backgroundColor: '#6fc8a8',
-        borderRadius: '10px',
-        border: 'none'
-    },
     menuIcon: {
-        fontSize: '40px',
-        color: '#fff',
-        padding: '5px'
+        fontSize: '30px',
+        padding: '3px 0px',
+        margin: 0
     }
 }))
 
-const _handleClick = (e) => {
-    e.preventDefault();
 
-}
+
 
 const Menu = () => {
+    const [active, setActive] = useState('open-menu');
     const classes = useStyles();
+
+    const _handleClick = (e) => {
+        e.preventDefault();
+        if (active === 'open-menu'){
+            setActive('open-menu active');
+        } else {
+            setActive('open-menu');
+        }
+    }
     return (
-        <div className={classes.navDiv}>
-            <button className={classes.menuButton} onClick={e => _handleClick(e)}>
+        <div className='navDiv'>
+            <button className='menuButton' onClick={e => _handleClick(e)}>
             <MenuIcon className={classes.menuIcon}/>
             </button>
+            <div className={active}>
+
+            </div>
         </div>
     )
 }

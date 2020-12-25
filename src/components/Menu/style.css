@@ -1,0 +1,40 @@
+.navDiv {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 2;
+}
+
+.navDiv button {
+    background-color: #6fc8a8;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+.navDiv button:focus {
+    outline: none;
+}
+
+.navDiv button:active {
+    background-color: #fff;
+    color: #6fc8a8;
+}
+
+.open-menu {
+    position: absolute;
+    width: 320px;
+    height: 300px;
+    background-color: #fff;
+    right: 15px;
+    top: -400px;
+    border-radius: 10px;
+    border: 3px solid #000;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.open-menu.active {
+    top: 40px;
+    opacity: 1;
+}
